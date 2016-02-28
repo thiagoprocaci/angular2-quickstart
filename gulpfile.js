@@ -28,16 +28,24 @@ gulp.task('copyHtml', function() {
     
 });
 
+// copy css to dist folder
+gulp.task('copyCss', function() {
+    gulp.src(['app/modules/hero/css/*.css'])
+        .pipe(gulp.dest('dist/modules/hero/css'))
+    
+});
+
 // watch html
 gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['copyHtml']);
+    gulp.watch('app/**/*.css', ['copyCss']);
 });
 
 
-
+// clean dist 
 gulp.task('clean', function(cb) {
     del(['dist/**/*']);
 });
 
 
-gulp.task('default', ['copyHtml', 'watch', 'start']);
+gulp.task('default', ['copyHtml', 'copyCss', 'watch', 'start']);
