@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import { HeroService }     from './modules/hero/hero.service';
-import { HeroesComponent } from './modules/hero/heroes.component';
+import { HeroService }     from './modules/hero/ts/hero.service';
+import { HeroesComponent } from './modules/hero/ts/heroes.component';
 @Component({
   selector: 'my-app',
   template: `

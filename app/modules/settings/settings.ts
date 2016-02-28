@@ -1,0 +1,1 @@
+export var ROOT_FOLDER: rootFolder = "./dist"
